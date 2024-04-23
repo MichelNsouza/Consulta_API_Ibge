@@ -9,23 +9,23 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
   <div x-data="app()" class="container">
+    
+    <h1 class="display-3 mt-5">Consulta API ibge Estados/Cidades</h1>
+    
     <form action="" method="POST">
-      
       <div class="row mt-5">
         
-        <div class="col-md-4">
+        <div class="col-md-4">  
           <label for="estado">Estados</label>
             <select class="form-select" name="estado" x-on:change="buscaCidades($event.target.value)">
               <option value="" selected>--- SELECIONE ---</option>
               <template x-for="estado in estados">
-                <option 
-                  x-text="estado.nome" 
-                  :value="estado.sigla">
-                </option>
+                <option :value="estado.sigla" x-text="estado.nome"></option>
               </template>
             </select>
         </div>
@@ -35,29 +35,22 @@
           <select class="form-select" name="cidade">
             <option value="" selected>--- SELECIONE ---</option>
             <template x-for="cidade in cidades">
-              <option 
-                x-text="cidade.nome" 
-                :value="cidade.nome">
-              </option>
+              <option x-text="cidade.nome" :value="cidade.nome"></option>
             </template>
           </select>
         </div>
+
+        <div class="row mt-5 algn-items-center justfy-content-center">
+          <div class="col-md-4">
+            <button class="btn btn-primary">
+              Enviar
+            </button>
+          </div>
+        </div>
         
       </div>
-
-      <div class="row mt-5">
-        <div class="col-md-4">
-          <button class="btn btn-primary">
-            Enviar
-          </button>
-        </div>
-      </div>
-      
     </form>
   </div>
-  <script src="script.js">
-
-  </script>
 </body>
-
+  
 </html>
