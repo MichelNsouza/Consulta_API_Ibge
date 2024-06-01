@@ -7,6 +7,9 @@ Este repositório contém a atividade feita em sala de aula para pesquisar estad
 - Backend: JavaScript
 - requisições HTTP: Axios
 
-  
+## Imagens 
+![image](https://github.com/MichelNsouza/Consulta_API_Ibge/assets/91084191/267a7963-252c-4e96-99dd-80b356c1d666)
+![image](https://github.com/MichelNsouza/Consulta_API_Ibge/assets/91084191/f41812b0-2c9a-4e03-b823-9438d223bf6b)
+
 ## Deploy
 - [Git Pages](https://michelnsouza.github.io/Consulta_API_Ibge/)
